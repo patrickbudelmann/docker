@@ -9,3 +9,5 @@ services:
       - vaultwarden:/data
 volumes:
   vaultwarden:
+networks:
+   proxy:
