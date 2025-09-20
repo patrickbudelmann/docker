@@ -1,0 +1,11 @@
+services:
+  bitwarden:
+    container_name: bitwarden
+    image: vaultwarden/server:latest-alpine
+    restart: unless-stopped
+    networks:
+      - proxy
+    volumes:
+      - vaultwarden:/data
+volumes:
+  vaultwarden:
