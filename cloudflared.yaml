@@ -3,10 +3,11 @@ services:
     image: cloudflare/cloudflared:latest
     container_name: cloudflare-tunnel
     restart: unless-stopped
-    networks:
-      - proxy
     environment:
      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
     command: tunnel run
+    
 networks:
-   proxy:
+   external:
+      external:
+      name: externalonly

@@ -3,11 +3,15 @@ services:
     container_name: bitwarden
     image: vaultwarden/server:latest-alpine
     restart: unless-stopped
-    networks:
-      - proxy
+    ports:
+      - 80:80
     volumes:
       - vaultwarden:/data
+      
 volumes:
   vaultwarden:
+
 networks:
-   proxy:
+   external:
+      external:
+      name: externalonly
