@@ -7,11 +7,10 @@ services:
       - 80:80
     volumes:
       - vaultwarden:/data
-      
+
 volumes:
   vaultwarden:
 
 networks:
    external:
-      external:
-      name: externalonly
+      external: true
