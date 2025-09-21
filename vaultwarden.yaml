@@ -5,8 +5,6 @@ services:
     restart: unless-stopped
     networks:
       - cloudflared
-    ports:
-      - 80:80
     volumes:
       - vaultwarden:/data
 
